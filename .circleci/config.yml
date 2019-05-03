@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  nodejs: canterberry/nodejs@12.1.0
+  nodejs: blockmason/nodejs@12.1.0
 
 workflows:
   default:
