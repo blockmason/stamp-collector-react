@@ -1,0 +1,39 @@
+{
+  "name": "@blockmason/link-workshop-tor-react",
+  "version": "2019.4.27",
+  "description": "React implementation of the Link stamp collector demo app",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build --no-autoinstall --no-source-maps src/index.html",
+    "clean": "rm -fR .cache .nyc_output dist docs",
+    "coverage": "nyc report",
+    "documentation": "rm -fR docs; find src -type f -name index.js | xargs jsdoc --destination ./docs --package ./package.json --readme ./README.md",
+    "lint": "eslint src",
+    "start": "parcel serve --no-autoinstall --no-hmr --https src/index.html",
+    "test": "find src -type f -name spec.js | NODE_ENV=test xargs nyc --silent --check-coverage --lines 100 --per-file mocha --require @babel/register"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.4",
+    "@babel/register": "7.4.4",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.16.0",
+    "eslint-plugin-ante": "1.0.2",
+    "eslint-plugin-react": "7.13.0",
+    "jsdoc": "3.5.5",
+    "mocha": "6.1.4",
+    "nyc": "14.1.0",
+    "parcel-bundler": "1.12.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.4.4",
+    "@blockmason/link-sdk": "0.1.4",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-redux": "7.0.3",
+    "redux": "4.0.1",
+    "redux-thunk": "2.3.0",
+    "styled-components": "4.2.0"
+  }
+}
