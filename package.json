@@ -5,12 +5,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build --no-autoinstall --no-source-maps src/index.html",
+    "build": "parcel build --no-autoinstall --no-source-maps --out-dir lib src/index.html",
     "clean": "rm -fR .cache .nyc_output dist docs",
     "coverage": "nyc report",
     "documentation": "rm -fR docs; find src -type f -name index.js | xargs jsdoc --destination ./docs --package ./package.json --readme ./README.md",
     "lint": "eslint src",
-    "start": "parcel serve --no-autoinstall --no-hmr --https src/index.html",
+    "start": "parcel serve --no-autoinstall --no-hmr --https --out-dir lib src/index.html",
     "test": "find src -type f -name spec.js | NODE_ENV=test xargs nyc --silent --check-coverage --lines 100 --per-file mocha --require @babel/register"
   },
   "devDependencies": {
