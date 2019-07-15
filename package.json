@@ -14,15 +14,15 @@
     "test": "find src -type f -name spec.js | NODE_ENV=test xargs nyc --silent --check-coverage --lines 100 --per-file mocha --require @babel/register"
   },
   "devDependencies": {
-    "@babel/core": "7.4.4",
+    "@babel/core": "7.5.4",
     "@babel/register": "7.4.4",
-    "babel-eslint": "10.0.1",
-    "eslint": "5.16.0",
+    "babel-eslint": "10.0.2",
+    "eslint": "6.0.1",
     "eslint-plugin-ante": "1.0.2",
-    "eslint-plugin-react": "7.13.0",
-    "jsdoc": "3.5.5",
+    "eslint-plugin-react": "7.14.2",
+    "jsdoc": "3.6.3",
     "mocha": "6.1.4",
-    "nyc": "14.1.0",
+    "nyc": "14.1.1",
     "parcel-bundler": "1.12.3"
   },
   "dependencies": {
@@ -31,9 +31,9 @@
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-redux": "7.0.3",
-    "redux": "4.0.1",
+    "react-redux": "7.1.0",
+    "redux": "4.0.4",
     "redux-thunk": "2.3.0",
-    "styled-components": "4.2.0"
+    "styled-components": "4.3.2"
   }
 }
